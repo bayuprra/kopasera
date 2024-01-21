@@ -61,6 +61,7 @@ Route::controller(TempatController::class)->middleware('auth')->group(function (
 Route::controller(TransaksiController::class)->middleware('auth')->group(function () {
     Route::get('/transaksi', 'index')->name('transaksi');
     Route::get('/detail', 'detail')->name('detail');
+    Route::get('/addTransaksi', 'addTransaksi')->name('addTransaksi');
     // Route::post('/addTransaksi', 'store')->name('addTransaksi');
     // Route::post('/updateTransaksi', 'update')->name('updateTransaksi');
     // Route::post('/deleteTransaksi', 'destroy')->name('deleteTransaksi');
