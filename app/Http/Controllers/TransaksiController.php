@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
+use App\Models\Tempat;
 use App\Models\Transaksi;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,17 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        //
+        $data = [
+            'title'     => "Transaksi",
+            'folder'    => "Home",
+            'data'      => $this->Transaksi->getData(),
+            // 'details'      => $this->Transaksi->getDetail(),
+            'list'      => $this->Barang->get(),
+            'list1'      => $this->Tempat->get(),
+
+        ];
+        // dump($data['data']);
+        return view('layout/admin_layout/transaksi', $data);
     }
 
     /**
@@ -22,9 +34,15 @@ class TransaksiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function detail(Request $request)
     {
-        //
+        $id = $request['id'];
+        $data = [
+            'title'     => "Transaksi",
+            'folder'    => "Home",
+            'data'      => $this->Transaksi->getDetail($id),
+        ];
+        return view('layout/admin_layout/detail_transaksi', $data);
     }
 
     /**

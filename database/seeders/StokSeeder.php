@@ -14,15 +14,15 @@ class StokSeeder extends Seeder
      */
     public function run()
     {
-        // $barangs = [1, 2, 3, 4];
+        $barangs = [1, 2, 3, 4];
 
-        // foreach ($barangs as $barang) {
-        //     Stok::create([
-        //         'barang_id' => $barang,
-        //         'status' => "OK",
-        //         'jumlah' => 100,
-        //         'total' => 100,
-        //     ]);
-        // }
+        foreach ($barangs as $barang) {
+            Stok::create([
+                'barang_id' => $barang,
+                'status' => "OK",
+                'jumlah' => 100,
+                'total' => 100,
+            ]);
+        }
     }
 }

@@ -28,7 +28,6 @@ class Barang extends Model
             'stok.total as total',
             'stok.id as stok_id'
         )
-        ->groupBy('barang_id')
         ->get();
 
     }

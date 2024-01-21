@@ -7,6 +7,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\TempatController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TransaksiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,4 +57,11 @@ Route::controller(TempatController::class)->middleware('auth')->group(function (
     Route::post('/addTempat', 'store')->name('addTempat');
     Route::post('/updateTempat', 'update')->name('updateTempat');
     Route::post('/deleteTempat', 'destroy')->name('deleteTempat');
+});
+Route::controller(TransaksiController::class)->middleware('auth')->group(function () {
+    Route::get('/transaksi', 'index')->name('transaksi');
+    Route::get('/detail', 'detail')->name('detail');
+    // Route::post('/addTransaksi', 'store')->name('addTransaksi');
+    // Route::post('/updateTransaksi', 'update')->name('updateTransaksi');
+    // Route::post('/deleteTransaksi', 'destroy')->name('deleteTransaksi');
 });
