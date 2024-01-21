@@ -10,7 +10,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:N1TNF6lG0fds5XDkUpNbTWhw+TNnP7GLX3VXRBx1yjg=',
+    'key' => 'base64:QeKb1g8pj3xcHfiBX1STFMmxQ/J3QIvtGS6PnR6R/LM=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -184,7 +184,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'F:\\app\\kopasera\\storage\\framework/cache/data',
+        'path' => 'D:\\laravel\\kopasera\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -355,12 +355,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\app\\kopasera\\storage\\app',
+        'root' => 'D:\\laravel\\kopasera\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'F:\\app\\kopasera\\storage\\app/public',
+        'root' => 'D:\\laravel\\kopasera\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -378,7 +378,7 @@
     ),
     'links' => 
     array (
-      'F:\\app\\kopasera\\public\\storage' => 'F:\\app\\kopasera\\storage\\app/public',
+      'D:\\laravel\\kopasera\\public\\storage' => 'D:\\laravel\\kopasera\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -413,13 +413,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'F:\\app\\kopasera\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\kopasera\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'F:\\app\\kopasera\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\kopasera\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -470,7 +470,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'F:\\app\\kopasera\\storage\\logs/laravel.log',
+        'path' => 'D:\\laravel\\kopasera\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -482,11 +482,11 @@
       'smtp' => 
       array (
         'transport' => 'smtp',
-        'host' => 'smtp.gmail.com',
-        'port' => '587',
-        'encryption' => 'tls',
-        'username' => 'kostkita207@gmail.com',
-        'password' => 'wrxavknargkvbnky',
+        'host' => 'mailhog',
+        'port' => '1025',
+        'encryption' => NULL,
+        'username' => NULL,
+        'password' => NULL,
         'timeout' => NULL,
         'auth_mode' => NULL,
       ),
@@ -528,7 +528,7 @@
     ),
     'from' => 
     array (
-      'address' => 'kostkita207@gmail.com',
+      'address' => NULL,
       'name' => 'Laravel',
     ),
     'markdown' => 
@@ -536,7 +536,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'F:\\app\\kopasera\\resources\\views/vendor/mail',
+        0 => 'D:\\laravel\\kopasera\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -641,7 +641,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'F:\\app\\kopasera\\storage\\framework/sessions',
+    'files' => 'D:\\laravel\\kopasera\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -661,9 +661,9 @@
   array (
     'paths' => 
     array (
-      0 => 'F:\\app\\kopasera\\resources\\views',
+      0 => 'D:\\laravel\\kopasera\\resources\\views',
     ),
-    'compiled' => 'F:\\app\\kopasera\\storage\\framework\\views',
+    'compiled' => 'D:\\laravel\\kopasera\\storage\\framework\\views',
   ),
   'flare' => 
   array (

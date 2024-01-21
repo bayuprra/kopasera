@@ -39,11 +39,11 @@ class BarangController extends Controller
             'nama' => $data['nama'],
             'harga_jual' => $data['harga_jual'],
             'harga_modal' => $data['harga_modal'],
-            'kategori_id'=> $data['kategori'],
+            'kategori_id' => $data['kategori'],
         );
         // dd($dataToInserted);
         $inserted = $this->Barang::create($dataToInserted);
-        if ($inserted) { 
+        if ($inserted) {
             $StokToInserted = array(
                 'barang_id'     => $inserted->id,
                 'status'    => "masuk",
@@ -58,16 +58,17 @@ class BarangController extends Controller
 
 
 
-    public function addStok(Request $request){
+    public function addStok(Request $request)
+    {
         $data = $request->all();
         $id = $data['id'];
         $stok_id = $data['stok_id'];
         $dataSpec = $this->Stok->find($stok_id);
         $dataToInserted = array(
-            'barang_id'     =>$data['id'],
-                'status'    => "masuk",
-                'jumlah'    => $data['jumlah'],
-                'total'      => $dataSpec['total'] + $data['jumlah']
+            'barang_id'     => $data['id'],
+            'status'    => "masuk",
+            'jumlah'    => $data['jumlah'],
+            'total'      => $dataSpec['total'] + $data['jumlah']
         );
         $inserted = $this->Stok::create($dataToInserted);
         if ($inserted) {
@@ -75,7 +76,6 @@ class BarangController extends Controller
             return redirect()->back()->with('success', 'Stok Berhasil Ditambahkan');
         }
         return redirect()->back()->with('error', 'Stok Gagal Ditambahkan');
-
     }
 
 
@@ -107,7 +107,7 @@ class BarangController extends Controller
             'nama' => $data['nama'],
             'harga_jual' => $data['harga_jual'],
             'harga_modal' => $data['harga_modal'],
-            'kategori_id'=> $data['kategori'],
+            'kategori_id' => $data['kategori'],
         ];
 
         $updateData = $dataSpec->update($dataToUpdate);
