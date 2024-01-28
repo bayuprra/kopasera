@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StokController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ModalController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\TempatController;
 use App\Http\Controllers\KategoriController;
@@ -61,7 +62,14 @@ Route::controller(TempatController::class)->middleware('auth')->group(function (
 Route::controller(TransaksiController::class)->middleware('auth')->group(function () {
     Route::get('/transaksi', 'index')->name('transaksi');
     Route::get('/detail', 'detail')->name('detail');
+    Route::get('/addTransaksi', 'addTransaksi')->name('addTransaksi');
     // Route::post('/addTransaksi', 'store')->name('addTransaksi');
     // Route::post('/updateTransaksi', 'update')->name('updateTransaksi');
     // Route::post('/deleteTransaksi', 'destroy')->name('deleteTransaksi');
+});
+Route::controller(ModalController::class)->middleware('auth')->group(function () {
+    Route::get('/modal', 'index')->name('modal');
+    Route::post('/addModal', 'store')->name('addModal');
+    Route::post('/updateModal', 'update')->name('updateModal');
+    Route::post('/deleteModal', 'destroy')->name('deleteModal');
 });

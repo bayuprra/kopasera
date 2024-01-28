@@ -64,10 +64,33 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="<?php echo e(route('transaksi')); ?>" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class=" nav-icon fas fa-exchange-alt"></i>
                         <p>
                             Transaksi
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('transaksi')); ?>" class="nav-link">
+                                <i class=" nav-icon fas fa-exchange-alt"></i>
+                                <p>Data Transaksi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?php echo e(route('addTransaksi')); ?>" class="nav-link">
+                                <i class=" nav-icon fas fa-exchange-alt"></i>
+                                <p>Tambah Transaksi</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="<?php echo e(route('modal')); ?>" class="nav-link">
+                        <i class=" nav-icon fas fa-plus"></i>
+                        <p>
+                            Data Modal
                         </p>
                     </a>
                 </li>

@@ -45,6 +45,18 @@ class TransaksiController extends Controller
         return view('layout/admin_layout/detail_transaksi', $data);
     }
 
+    public function addTransaksi()
+    {
+
+        $data = [
+            'title'     => "Transaksi",
+            'list'      => $this->Barang->get(),
+            'folder'    => "Home",
+            'data'      => "",
+        ];
+        return view('layout/admin_layout/tambah_transaksi', $data);
+    }
+
     /**
      * Store a newly created resource in storage.
      *

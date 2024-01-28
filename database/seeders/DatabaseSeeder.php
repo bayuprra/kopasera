@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             TempatSeeder::class,
             TransaksiSeeder::class,
             DetailTransaksiSeeder::class,
+            ModalSeeder::class,
         ]);
     }
 }

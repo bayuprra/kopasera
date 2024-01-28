@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Akun;
 use App\Models\Stok;
+use App\Models\Modal;
 use App\Models\Barang;
 use App\Models\Tempat;
 use App\Models\Kategori;
@@ -17,7 +18,7 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected $akunModel, $Kategori, $Barang, $Stok, $Tempat, $Transaksi;
+    protected $akunModel, $Kategori, $Barang, $Stok, $Tempat, $Transaksi, $Modal;
 
     public function __construct()
     {
@@ -27,5 +28,7 @@ class Controller extends BaseController
         $this->Stok = new Stok();
         $this->Tempat = new Tempat();
         $this->Transaksi = new Transaksi();
+        $this->Modal = new Modal();
+
     }
 }

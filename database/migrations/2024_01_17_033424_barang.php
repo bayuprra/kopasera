@@ -21,7 +21,9 @@ class Barang extends Migration
             $table->foreignId('kategori_id')
             ->nullable()
             ->constrained('kategori')
-            ->nullOnDelete();          
+            ->nullOnDelete();
+            $table->foreignId('modal_id')
+            ->constrained('modal');         
             $table->timestamps();
         });
     }
