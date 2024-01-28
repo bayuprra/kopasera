@@ -52,6 +52,7 @@ class TransaksiController extends Controller
             'title'     => "Transaksi",
             'folder'    => "Home",
             'data'      => "",
+            'barang'    => $this->Barang->getData(),
         ];
         return view('layout/admin_layout/tambah_transaksi', $data);
     }
